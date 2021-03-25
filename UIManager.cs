@@ -10,14 +10,13 @@ public class UIManager : MonoBehaviour
 
     public AudioSource clip;
 
-    public void OptionPanel()
+    public void OptionPanel()   //일시정지
     {
-        Debug.Log("누름");
         Time.timeScale = 0;
         optionPanel.SetActive(true);
     }
 
-    public void Return()
+    public void Return()        //돌아가기
     {
         Time.timeScale = 1;
         optionPanel.SetActive(false);
@@ -29,20 +28,19 @@ public class UIManager : MonoBehaviour
       //Graphics
     }
 
-    public void GoMainMenu()
+    public void GoMainMenu()     //메인메뉴로 이동
     {
         Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu");
     }
 
-    public void ExitGame()
+    public void ExitGame()      //게임종료
     {
         Application.Quit();
     }
 
-    public void PlaySoundButton()
+    public void PlaySoundButton()       //사운드 조절 예정중
     {
         clip.Play();
-        
     }
 }

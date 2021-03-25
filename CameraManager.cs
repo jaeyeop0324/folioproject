@@ -29,9 +29,10 @@ public class CameraManager : MonoBehaviour
         halfWidth = halfHeight * Screen.width / Screen.height;  //반넓이 
 
     }
+    //카메라 위치 따라갈수 있게
     private void Update()
     {
-        if (target.gameObject != null)
+        if (target.gameObject != null)  
         {
             targetPosition.Set(target.transform.position.x, target.transform.position.y, this.transform.position.z);
             this.transform.position = Vector3.Lerp(this.transform.position, targetPosition, moveSpeed * Time.deltaTime);

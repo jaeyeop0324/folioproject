@@ -8,9 +8,9 @@ public class PlayerRespawn : MonoBehaviour
     private float checkPointPoitionX, checkPointPoitionY;
 
     public Animator animator;
-    public GameObject[] hearts;
-    private int life;
-    private bool DamegeDelay = true;
+    public GameObject[] hearts;     //목숨
+    private int life;               //목숨
+    private bool DamegeDelay = true;    //데미지 체크
     
     void Start()
     {

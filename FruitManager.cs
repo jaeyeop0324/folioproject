@@ -9,10 +9,10 @@ public class FruitManager : MonoBehaviour
     public Text levelCleared;
     public GameObject tramsition;
 
-    public Text totalfruits;
-    public Text fruitsCollected;
+    public Text totalfruits;        //총 수량
+    public Text fruitsCollected;    //먹은수량
 
-    private int totalFruitsInLevel;
+    private int totalFruitsInLevel; //총 수량
 
     private void Start()
     {

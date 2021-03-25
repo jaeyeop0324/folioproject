@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    public float runSpeed = 2;
-    public float jumpSpeed = 3;
-    public float doubleJumpSpeed = 2.5f;
-    private bool canDoubleJump;
+    public float runSpeed = 2;          //스피드
+    public float jumpSpeed = 3;         //쩜프 속도
+    public float doubleJumpSpeed = 2.5f;    //더블점프
+    private bool canDoubleJump;             //점프 확인
 
     public Rigidbody2D rigidBody;
 
-    public bool betterJump = false;
-    public float fallMultiplier = 0.5f;
-    public float lowJumpMultiplier = 1f;
+    public bool betterJump = false;         //낮은점프 확인
+    public float fallMultiplier = 0.5f;     //낮은점프 속도
+    public float lowJumpMultiplier = 1f;    //높은점프 속도
 
     public SpriteRenderer spriteRenderer;
     public Animator animator;
@@ -25,8 +25,6 @@ public class PlayerMove : MonoBehaviour
     {
         rigidBody = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        Screen.SetResolution(1280, 720, true);
-
     }
     private void Update()
     {
@@ -73,6 +71,9 @@ public class PlayerMove : MonoBehaviour
             animator.SetBool("isFalling", false);
         }
     }
+
+
+    //이동관련된 부분은 전부 FixedUpdate에
     void FixedUpdate()
     {
         if (Input.GetKey("right"))
